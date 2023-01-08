@@ -20,7 +20,8 @@ namespace webserver
             {
                 _connections.Add(cid, name);
             }
-            Clients.All.ReceiveMessage(new TransData(cid, System.Text.Encoding.UTF8.GetBytes("hello")));
+            //Clients.All.ReceiveMessage(new TransData(cid, System.Text.Encoding.UTF8.GetBytes("hello")));
+            Clients.All.myMessage(cid, name);
         }
         public string GetConnectionId()
         {
